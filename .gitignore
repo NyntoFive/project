@@ -1,0 +1,7 @@
+__pycache__
+*.__pyc
+.env
+venv
+.vscode
+db.sqlite3
+photologue
