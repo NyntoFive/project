@@ -39,9 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
     'django_extensions',
-    'photologue',
-    'sortedm2m',
+    'mptt',
     'pages',
+    'products',
+    
     
 ]
 
@@ -83,9 +84,32 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    },
+    # 'default': {
+    #     'ENGINE': 'mssql',
+    #     'NAME': 'mydb',
+    #     'USER': 'user@myserver.com',
+    #     'PASSWORD': 'password',
+    #     'HOST': 'myserver.database.windows.net',
+    #     'PORT': '',
+    #     'OPTIONS': {
+    #         'driver': 'ODBC Driver 17 for SQL Server',
+    #     },
+    # },
 }
+# DATABASE_CONNECTION_POOLING = False
 
+# }
+# DATABASES = {
+#    'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'postgres',
+#         'USER': 'postgres',
+#         'PASSWORD': 'postgres',
+#         'HOST': '127.0.0.1',
+#         'PORT': '5432',
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators

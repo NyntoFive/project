@@ -8,23 +8,19 @@ class Category(MPTTModel):
     """
     Category Table implimented with MPTT.
     """
-
     name = models.CharField(
         verbose_name=_("Category Name"),
         help_text=_("Required and unique"),
         max_length=255,
-        unique=True,
-    )
+        unique=True)
     slug = models.SlugField(
-        verbose_name=_("Category safe URL"), max_length=255, unique=True
-    )
+        verbose_name=_("Category safe URL"), max_length=255, unique=True)
     parent = TreeForeignKey(
         "self",
         on_delete=models.CASCADE,
         null=True,
         blank=True,
-        related_name="children",
-    )
+        related_name="children")
     is_active = models.BooleanField(default=True)
 
     class MPTTMeta:
@@ -93,12 +89,11 @@ class Product(models.Model):
     title = models.CharField(
         verbose_name=_("title"),
         help_text=_("Required"),
-        max_length=255,
-    )
+        max_length=255)
     description = models.TextField(
-        verbose_name=_("description"), help_text=_("Not Required"), blank=True
-    )
-    slug = models.SlugField(max_length=255)
+        verbose_name=_("description"), help_text=_("Not Required"), blank=True)
+
+    slug = models.SlugField(blank=True, null=True)
     regular_price = models.DecimalField(
         verbose_name=_("Regular price"),
         help_text=_("Maximum 999.99"),
@@ -110,8 +105,7 @@ class Product(models.Model):
         max_digits=5,
         decimal_places=2,
         blank=True,
-        null=True,
-    )
+        null=True)
     discount_price = models.DecimalField(
         verbose_name=_("Discount price"),
         help_text=_("Maximum 999.99"),
@@ -123,29 +117,21 @@ class Product(models.Model):
         max_digits=5,
         decimal_places=2,
         blank=True,
-        null=True,
-    )
+        null=True)
     is_active = models.BooleanField(
         verbose_name=_("Product visibility"),
         help_text=_("Change product visibility"),
         default=True,
     )
     created_at = models.DateTimeField(
-        _("Created at"), auto_now_add=True, editable=False
-    )
+        _("Created at"), auto_now_add=True, editable=False)
     updated_at = models.DateTimeField(_("Updated at"), auto_now=True)
 
     all_images = models.TextField()
-    cannonical_url = models.URLField(default="https://knifekits.com/vcom")
-    video_url = models.URLField(blank=True)
     name = models.CharField(max_length=255)
     price = models.DecimalField(max_digits=8, decimal_places=2)
     keywords = models.CharField(max_length=255)
-    discount_tiers = models.CharField(max_length=255, blank=True, null=True)
-    discount_amount = models.CharField(max_length=255, blank=True, null=True)
-
     link = models.URLField()
-    products_id = models.CharField(max_length=50, blank=True)
 
     class Meta:
         ordering = ("-created_at",)

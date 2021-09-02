@@ -1,0 +1,12 @@
+pkg_resources==0.0.0
+django>=3.2
+scrapy
+pillow
+pydantic
+django-mptt
+django-extensions
+
+requests-html
+ipython
+
+# dev
