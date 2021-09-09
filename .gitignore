@@ -5,3 +5,6 @@ venv
 .vscode
 db.sqlite3
 photologue
+crawl_app
+utils.py
+recycle_bin

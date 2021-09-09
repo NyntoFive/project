@@ -30,24 +30,11 @@ class Knifekits(SQLModel, table=True):
     manufacturer = Field()
 
 class DemoLoader(ItemLoader):
-    default_output_processor = TakeFirst()
-    description_in =MapCompose(unicode.description)
-    description_out = Join()
-
-def parse(file):
-    def clean_desc(values):
-        if values
-        txt = ""
-        for line in values.split('\n'):
-            txt += line.strip() + "\n"
-        return txt
-
-    page = html.parse(file)
-    item=dict()
+    item = Knifekits()
     item['link'] = "https://knifekits.com/vcom/" + file
+    item['sku'] = page.xpath('//a[@class="thumbnail"]/@data-title')[0]
     item['description'] = clean_desc(page.xpath('//div[@itemprop="description"]/descendant-or-self::text()').text_content())
     item['all_images'] = page.xpath('//a[@class="thumbnail"]/@data-image')
-    item['sku'] = page.xpath('//a[@class="thumbnail"]/@data-title')[0]
     item['name'] = page.xpath('//h1')[0].text_content().split('Stock')[0]
     item['price'] = page.xpath('//h1')[0].text_content().split("$")[-1].strip()
     item['keywords'] = page.xpath('//meta[@name="keywords"]/@content')[0]
@@ -55,5 +42,24 @@ def parse(file):
     item['main_image'] = page.xpath('//div[@class="piGalMain"]/img/@src')[0]
     item['breadcrumbs'] = page.xpath('//*[@class="breadcrumb"]')[0].text_content().split('\n')
 
-    return item
-    
+folder = "h:/_pages"
+saved = [os.path.join(folder, file) for file in os.listdir(folder)]
+results=[]
+for fname in saved:
+    url = fname
+    fields = {
+        "link": '//*[@rel="canonical"]/@href',
+        "sku": '//span[@itemprop="model"]/descendant-or-self::text()',
+        "name": '//h1/descendant::span[@itemprop="name"]/text()',
+        "main_image": '//div[@class="piGalMain"]/img/@src',
+        "image_urls": '//*[@class="thumbnail"]/@data-image',
+        "description": '//div[@itemprop="description"]',
+        "price": './/*[@itemprop="price"]/text()',
+        "breadcrumbs": './/*[@class="breadcrumb"]',
+        "title": "/html/head/title/text()",
+        "keywords": './/meta[@name="keywords"]/@content',
+        "short_desc": '//meta[@name="description"]/@content',
+        "discount_tiers": './/*[@class="DiscountPriceQty"]/descendant-or-self::text()',
+        "discount_amount": './/*[@class="DiscountPrice"]/descendant-or-self::text()',
+        "products_id": '//input[@name="products_id"]/@value',
+        }
