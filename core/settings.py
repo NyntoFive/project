@@ -40,8 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'django_extensions',
     'mptt',
+    'recipes',
     'pages',
-    'products',
+    # 'products',
     
     
 ]
@@ -55,7 +56,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
+ 
 ROOT_URLCONF = 'core.urls'
 
 TEMPLATES = [
