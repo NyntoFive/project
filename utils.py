@@ -45,21 +45,19 @@ class DemoLoader(ItemLoader):
 folder = "h:/_pages"
 saved = [os.path.join(folder, file) for file in os.listdir(folder)]
 results=[]
-for fname in saved:
-    url = fname
-    fields = {
-        "link": '//*[@rel="canonical"]/@href',
-        "sku": '//span[@itemprop="model"]/descendant-or-self::text()',
-        "name": '//h1/descendant::span[@itemprop="name"]/text()',
-        "main_image": '//div[@class="piGalMain"]/img/@src',
-        "image_urls": '//*[@class="thumbnail"]/@data-image',
-        "description": '//div[@itemprop="description"]',
-        "price": './/*[@itemprop="price"]/text()',
-        "breadcrumbs": './/*[@class="breadcrumb"]',
-        "title": "/html/head/title/text()",
-        "keywords": './/meta[@name="keywords"]/@content',
-        "short_desc": '//meta[@name="description"]/@content',
-        "discount_tiers": './/*[@class="DiscountPriceQty"]/descendant-or-self::text()',
-        "discount_amount": './/*[@class="DiscountPrice"]/descendant-or-self::text()',
-        "products_id": '//input[@name="products_id"]/@value',
-        }
+fields = {
+    "link": '//*[@rel="canonical"]/@href',
+    "sku": '//span[@itemprop="model"]/descendant-or-self::text()',
+    "name": '//h1/descendant::span[@itemprop="name"]/text()',
+    "main_image": '//div[@class="piGalMain"]/img/@src',
+    "image_urls": '//*[@class="thumbnail"]/@data-image',
+    "description": '//div[@itemprop="description"]',
+    "price": './/*[@itemprop="price"]/text()',
+    "breadcrumbs": './/*[@class="breadcrumb"]',
+    "title": "/html/head/title/text()",
+    "keywords": './/meta[@name="keywords"]/@content',
+    "short_desc": '//meta[@name="description"]/@content',
+    "discount_tiers": './/*[@class="DiscountPriceQty"]/descendant-or-self::text()',
+    "discount_amount": './/*[@class="DiscountPrice"]/descendant-or-self::text()',
+    "products_id": '//input[@name="products_id"]/@value',
+}

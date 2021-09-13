@@ -86,6 +86,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     },
+}
     # 'default': {
     #     'ENGINE': 'mssql',
     #     'NAME': 'mydb',
@@ -97,7 +98,6 @@ DATABASES = {
     #         'driver': 'ODBC Driver 17 for SQL Server',
     #     },
     # },
-}
 # DATABASE_CONNECTION_POOLING = False
 
 # }
