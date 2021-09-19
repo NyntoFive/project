@@ -1,0 +1,637 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KB - Bootstrap 5 Knowledge Base Theme</title>
+	
+
+	{% comment %} <!-- FAVICONS -->
+	<link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png'">
+	<link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="favicons/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+	<link rel="manifest" href="/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="favicons/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff"> {% endcomment %}
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="{% static 'pages/css/style.css' %}">
+	<link rel="stylesheet" href="{% static 'pages/css/bootstrap.min.css' %}">
+
+	<!-- FONT -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+	<nav id="navbar" class="navbar navbar-expand-lg navbar-light">
+		<div class="container-xxl container-fluid ">
+			<a id="navbar-brand" class="navbar-brand" href="#">KB</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+				aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarText">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="#">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Product</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Services</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Shop</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Blog</a>
+					</li>
+				</ul>
+				<span class="navbar-text">
+					<a class="btn primary-button" href="#">Contact Us</i></a>
+				</span>
+			</div>
+		</div>
+	</nav>
+
+
+     <!-- HEADER -->
+	<section id="header">
+		<div class="header-content">
+			<div class="container-fluid container-xl hero">
+				<div class="row">
+					<div class="col-sm-12 col-md-5 svg-header-container ">
+						<img src="{% static 'pages/images/illustration2.svg' %}" alt %}="Mobile SVG illustration">
+					</div>
+					<div class="col-sm-12 col-md-7 header-content-container">
+						<div>
+							<h1 class="text--white text-heading">Build a business with a stunning <span class="text--green">knowledge base</span>. What can we help you <span class="text--green">find</span>?</h1>
+								
+							<p class="header-content-text">KB is a fully featured knowledge base theme for any products and services.</p>
+							<div class="search-container">
+								<form action="#">
+									<input class="form-control" placeholder="Search for something">
+									<button class="btn secondary-button" type="submit"><i
+											class="fas fa-search"></i></button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+			<path fill="#ffffff" fill-opacity="1"
+				d="M0,32L34.3,48C68.6,64,137,96,206,96C274.3,96,343,64,411,48C480,32,549,32,617,80C685.7,128,754,224,823,234.7C891.4,245,960,171,1029,160C1097.1,149,1166,203,1234,224C1302.9,245,1371,235,1406,229.3L1440,224L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z">
+			</path>
+		</svg>
+	</section>
+
+
+   <!-- BENEFITS -->
+	<section id="companies" class="section">
+		<div class="container">
+			<h5>Used by 400+ people from the biggest companies</h5>
+			<div class="company-img-container">
+				<img class="company-img" src="{% static 'pages/images/amazon.png' %}" alt="">
+				<img class="company-img" src="{% static 'pages/images/disney.png' %}" alt="">
+				<img class="company-img" src="{% static 'pages/images/kfc.png' %}" alt="">
+				<img class="company-img" src="{% static 'pages/images/mailchimp.png' %}" alt="">
+				<img class="company-img" src="{% static 'pages/images/shopify.png' %}" alt="">
+			</div>
+		</div>
+	</section>
+
+	<section id="about" class="section">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xl-4 col-md-10 col-sm-12 offset-xl-1 left">
+					<div class="sticky-element">
+						<h3 class="text-heading text--violet">WHY CHOOSE US?</h3>
+						<h2 class="text-heading">Check out why we’re the best company for all of your
+							needs.</h2>
+					</div>
+				</div>
+
+				<div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 right">
+					<div class="row">
+						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-xs-12 col-flex">
+							<div class="about-card">
+								<img src="{% static 'pages/images/shield.png' %}" alt="Icon">
+								<h4 class="text-heading">Multi-factor authentication.</h4>
+								<p>Increase learner engagement & knowledge retention in higher education and corporate
+									training.</p>
+							</div>
+						</div>
+						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-xs-12 col-flex">
+							<div class="about-card">
+								<img src="{% static 'pages/images/flag.png' %}" alt="Icon">
+								<h4 class="text-heading">Increase user conversion.</h4>
+								<p>Increase learner engagement & knowledge retention in higher education and corporate
+									training.</p>
+							</div>
+						</div>
+						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-xs-12 col-flex">
+							<div class="about-card">
+								<img src="{% static 'pages/images/heart-shape-outline-with-lifeline.png' %}" alt="Icon">
+								<h4 class="text-heading">Full control over UX.</h4>
+								<p>Increase learner engagement & knowledge retention in higher education and corporate
+									training.</p>
+							</div>
+						</div>
+
+						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-xs-12 col-flex">
+							<div class="about-card">
+								<img src="{% static 'pages/images/selective.png' %}" alt="Icon">
+								<h4 class="text-heading">Expand user funnel.</h4>
+								<p>Increase learner engagement & knowledge retention in higher education and corporate
+									training.</p>
+							</div>
+						</div>
+						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-xs-12 col-flex">
+							<div class="about-card">
+								<img src="{% static 'pages/images/favorites.png' %}" alt="Icon">
+								<h4 class="text-heading">Security compliant.</h4>
+								<p>Increase learner engagement & knowledge retention in higher education and corporate
+									training.</p>
+							</div>
+						</div>
+						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-xs-12 col-flex">
+							<div class="about-card">
+								<img src="{% static 'pages/images/fire.png' %}" alt="Icon">
+								<h4 class="text-heading">Integration in minutes.</h4>
+								<p>Increase learner engagement & knowledge retention in higher education and corporate
+									training.</p>
+							</div>
+						</div>
+
+						<div class="col-xl-12 col-lg-12 col-sm-12 about-link-container">
+							<a class="btn primary-button" href="#">View more choices <i
+									class="fas fa-arrow-right"></i></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+    <!-- KNOWLEDGE BASE LISTING -->
+	<section id="categories" class="section">
+		<div class="container guide-container">
+			<div class="row">
+				<div class="col-sm-12 col-md-8 offset-md-2 title-section">
+					<h3 class="text-heading text--violet">GUIDE CATEGORIES</h3>
+					<h2 class="text-heading">Easily create Documentation, Knowledge-base, FAQ, Forum and
+						more.</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 col-sm-12 cat-card">
+					<div class="cat-card-content">
+						<h4 class="text-heading">Getting Started</h4>
+						<ul>
+							<li>
+								<a class="hvr-link" href="#">Welcome to Ghost</a>
+							</li>
+							<li>
+								<a class="hvr-link" href="#">Writing posts with Ghost</a>
+							</li>
+							<li>
+								<a class="hvr-link" href="#">Publishing options</a>
+							</li>
+							<li>
+								<a class="hvr-link" href="#">Managing admin settings</a>
+							</li>
+							<li>
+								<a class="btn text--green link-button" href="#">View more choices <i
+										class="fas fa-arrow-right"></i></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-12 cat-card">
+					<div class="cat-card-content">
+						<h4 class="text-heading">Advanced Usage</h4>
+						<ul>
+							<li>
+								<a class="hvr-link" href="#">How do I set a publication language?</a>
+							</li>
+							<li>
+								<a class="hvr-link" href="#">How do I change my configured site URL?</a>
+							</li>
+							<li>
+								<a class="hvr-link" href="#">How do I set a publication language?</a>
+							</li>
+							<li>
+								<a class="hvr-link" href="#">How do I change my configured site URL?</a>
+							</li>
+							<li>
+								<a class="btn text--green link-button" href="#">View more choices <i
+										class="fas fa-arrow-right"></i></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-12 cat-card">
+					<div class="cat-card-content">
+						<h4 class="text-heading">Writing posts and pages</h4>
+						<ul>
+							<li>
+								<a class="hvr-link" href="#">Organising content in Ghost</a>
+							</li>
+							<li>
+								<a class="hvr-link" href="#">Using the editor</a>
+							</li>
+							<li>
+								<a class="hvr-link" href="#">Publishing Options</a>
+							</li>
+							<li>
+								<a class="hvr-link" href="#">General publication settings</a>
+							</li>
+							<li>
+								<a class="btn text--green link-button" href="#">View more choices <i
+										class="fas fa-arrow-right"></i></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 col-sm-12 cat-card">
+					<div class="cat-card-content">
+						<h4 class="text-heading">Website Configuration</h4>
+						<ul>
+							<li>
+								<a class="hvr-link" href="#">Managing your team</a>
+							</li>
+							<li>
+								<a class="hvr-link" href="#">Imports and exports</a>
+							</li>
+							<li>
+								<a class="hvr-link" href="#">Design Settings</a>
+							</li>
+							<li>
+								<a class="hvr-link" href="#">Design Settings</a>
+							</li>
+							<li>
+								<a class="btn text--green link-button" href="#">View more choices <i
+										class="fas fa-arrow-right"></i></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-12 cat-card">
+					<div class="cat-card-content">
+						<h4 class="text-heading">Databases</h4>
+						<ul>
+							<li>
+								<a class="hvr-link" href="#">Setup home page layout</a>
+							</li>
+							<li>
+								<a class="hvr-link" href="#">Where do i post support query?</a>
+							</li>
+							<li>
+								<a class="hvr-link" href="#">Multiple Installs on One Domain</a>
+							</li>
+							<li>
+								<a class="hvr-link" href="#">Setup shop page</a>
+							</li>
+							<li>
+								<a class="btn text--green link-button" href="#">View more choices <i
+										class="fas fa-arrow-right"></i></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-12 cat-card">
+					<div class="cat-card-content">
+						<h4 class="text-heading">Most Popular Articles</h4>
+						<ul>
+							<li>
+								<a class="hvr-link" href="#">How do i change link and button color globally</a>
+							</li>
+							<li>
+								<a class="hvr-link" href="#">Where do i post support query?</a>
+							</li>
+							<li>
+								<a class="hvr-link" href="#">Private Article</a>
+							</li>
+							<li>
+								<a class="hvr-link" href="#">Setup shop page</a>
+							</li>
+							<li>
+								<a class="btn text--green link-button" href="#">View more choices <i
+										class="fas fa-arrow-right"></i></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+  <!-- USERS COUNT -->
+	<section id="stats" class="section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-md-12 offset-lg-3 title-section">
+					<h2 class="text-heading section-heading">Our company in numbers</h2>
+					<p>Our company is spreading all over the world in a very wide range and is always on the rise to
+						bring the best services to you</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="stat-item">
+						<h6>245</h6>
+						<p>Customers</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="stat-item">
+						<h6>27+</h6>
+						<p>Expert Instruction</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="stat-item">
+						<h6>200k</h6>
+						<p>Active Student</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="stat-item">
+						<h6>1127</h6>
+						<p>Guidelines</p>
+					</div>
+				</div>
+				<div class="col-md-10 offset-md-1">
+					<div class="stat-img">
+						<img src="img/laptop.jpg" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+  <!-- FAQ -->
+	<section id="faq" class="section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-md-12 offset-lg-3 title-section">
+					<h2 class="text-heading section-heading">Frequently Asked Questions</h2>
+					<p>FAQ is suppose to be an online document that poses a series of common
+						questions and answers on a specific topic.</p>
+				</div>
+				<div class="col-lg-4 col-md-5 col-sm-12">
+					<div class="card sticky-element">
+						<ul class="list-group list-group-flush">
+							<h4 class="text-heading">Quick Navigation</h4>
+							<a href="#"
+								class="list-group-item list-group-item-action d-flex justify-content-between align-items-center active"
+								aria-current="true">
+								License
+								<i class="fas fa-chevron-right"></i>
+							</a>
+							<a href="#"
+								class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+								Pricing & Support
+								<i class="fas fa-chevron-right"></i>
+							</a>
+							<a href="#"
+								class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+								Purchasing Online
+								<i class="fas fa-chevron-right"></i>
+							</a>
+							<a href="#"
+								class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+								Returns
+								<i class="fas fa-chevron-right"></i>
+							</a>
+
+
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-8 col-md-7 col-sm-12">
+					<div class="accordion" id="accordionExample">
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="headingOne">
+								<button class="accordion-button" type="button" data-bs-toggle="collapse"
+									data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+									What is your refund policy and terms and conditions?
+								</button>
+							</h2>
+							<div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+								data-bs-parent="#accordionExample">
+								<div class="accordion-body">
+									We comply fully with KB’s refund policy. We issue refunds for the reasons KB
+									permits us to give refund and we don’t issue refunds on the cases KB does not
+									guarantee refunds. Please check KB’s refund policy:
+								</div>
+							</div>
+						</div>
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="headingTwo">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+									data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+									How many shortcodes/blocks/elements are there in Rogan?
+								</button>
+							</h2>
+							<div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+								data-bs-parent="#accordionExample">
+								<div class="accordion-body">
+									There are over 200 shortcodes/blocks/elements in Rogan WordPress Theme. You can use
+									any block/element into any page as you want.
+								</div>
+							</div>
+						</div>
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="headingThree">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+									data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+									Is Rogan Gutenberg compatible and latest WordPress supported?
+								</button>
+							</h2>
+							<div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+								data-bs-parent="#accordionExample">
+								<div class="accordion-body">
+									Yes, SaasLand is compatible with Gutenberg.
+								</div>
+							</div>
+						</div>
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="headingFour">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+									data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+									How many websites can I use Rogan in with a regular license?
+								</button>
+							</h2>
+							<div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+								data-bs-parent="#accordionExample">
+								<div class="accordion-body">
+									According to KB’s licensing, you can use SaasLand or any other theme on only one website. If you want to use it on multiple websites, you must buy multiple licenses. 
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+  <!-- TESTIMONIALS -->
+	<section id="testimonials" class="section">
+		<div class="space-between-blocks">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 offset-md-2 title-section">
+						<h3 class="text-heading text--violet">WHAT THEY SAY ABOUT US</h3>
+						<h2 class="text-heading">Approved by more than 300 customer like you all aroung the world.</h2>
+					</div>
+					<div class="row px-2 pt-4">
+						<div class="col-lg-6 pb-5">
+							<div class="testimonial-card-1">
+								<p class="testimonial-card-1__paragraph">Knowledge base is one of the critical tools for both customer support and internal knowledge management. That’s why KB always aim to use the best technology available and do periodic market reviews to make sure we are using the latest and the most advanced tools. </p>
+								<div class="testimonial-blk-person">
+									<div><img class="testimonial-blk-person__avatar"
+											src="{% static 'pages/images/mark-doe.jpg' %}"></div>
+									<div class="px-2"></div>
+									<div class="flex-grow-1 d-flex flex-column"><span class="testimonial-blk-person__rating"><i
+												class="fas fa-star"></i><i class="fas fa-star"></i><i
+												class="fas fa-star"></i><i class="fas fa-star"></i><i
+												class="fas fa-star"></i></span><span class="testimonial-blk-person__name my-1">Mark
+											Doe</span><span class="testimonial-blk-person__info">XYZ Company</span></div>
+								</div><span class="testimonial-card-1__quote-symbol"><i
+										class="fas fa-quote-left"></i></span>
+							</div>
+						</div>
+						<div class="col-lg-6 pb-5">
+							<div class="testimonial-card-1">
+								<p class="testimonial-card-1__paragraph">My experience with KB goes back several years. I've had a few KB programs over the years because I create and manage multiple websites. I recently made the decision to have all of our KB's convert to KB and I've been very, very pleased.</p>
+								<div class="testimonial-blk-person">
+									<div><img class="testimonial-blk-person__avatar"
+											src="{% static 'pages/images/chris-doe.jpg' %}"></div>
+									<div class="px-2"></div>
+									<div class="flex-grow-1 d-flex flex-column"><span class="testimonial-blk-person__rating"><i
+												class="fas fa-star"></i><i class="fas fa-star"></i><i
+												class="fas fa-star"></i><i class="fas fa-star"></i><i
+												class="fas fa-star"></i></span><span
+											class="testimonial-blk-person__name my-1">Chris Doe</span><span
+											class="testimonial-blk-person__info">CHO Digital</span></div>
+								</div><span class="testimonial-card-1__quote-symbol"><i
+										class="fas fa-quote-left"></i></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+   <!-- FOOTER -->
+	<section id="contact" class="section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 offset-md-3 title-section">
+					<h2 class="text-heading section-heading">Get More Help</h2>
+					<p>Here we have more ways to get help from real humans.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-3 col-sm-6 col-xs-12">
+					<a href="#">
+						<div class="card">
+							<i class="fas fa-user-friends"></i>
+							<p>Forums</p>
+						</div>
+					</a>
+				</div>
+				<div class="col-lg-3 col-sm-6 col-xs-12">
+					<a href="#">
+						<div class="card">
+							<i class="fab fa-twitter"></i>
+							<p>Twitter Support</p>
+						</div>
+					</a>
+				</div>
+				<div class="col-lg-3 col-sm-6 col-xs-12">
+					<a href="#">
+						<div class="card">
+							<i class="fas fa-envelope"></i>
+							<p>Email Us</p>
+						</div>
+					</a>
+				</div>
+				<div class="col-lg-3 col-sm-6 col-xs-12">
+					<a href="#">
+						<div class="card">
+							<i class="fas fa-phone-alt"></i>
+							<p>Phone Call</p>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		
+	</section>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-9 col-sm-12  left">
+					<ul>
+						<li>
+							<a href="#" class="nav-link">Home</a>
+						</li>
+						<li>
+							<a href="#" class="nav-link">Docs</a>
+						</li>
+						<li>
+							<a href="#" class="nav-link">Changelog</a>
+						</li>
+						<li>
+							<a href="#" class="nav-link">Purchase</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-md-3 col-sm-12  right footer-logo ">
+					<a id="navbar-brand" class="navbar-brand " href="#">KB</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+	<!-- JS -->
+	<script src="{% static 'pages/js/script.js' %}"></script>
+	<script src="https://kit.fontawesome.com/4241dd0506.js" crossorigin="anonymous"></script>
+	<script src="{% static 'pages/js/bootstrap.bundle.min.js' %}"></script>
+<!-- Static App Form Collection Script -->
+<script src="" type="text/javascript"></script>
+</body>
+
+</html>

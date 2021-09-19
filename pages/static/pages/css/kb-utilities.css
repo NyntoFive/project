@@ -1,0 +1,71 @@
+ 
+.primary-button {
+    padding: 10px 22px !important;
+    background: #4ED199 !important;
+    border-radius: 10px;
+    box-shadow: 0px 0px 30px 0px rgb(0 0 0 / 9%);
+    color: #ffffff !important;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px !important;
+    letter-spacing: 1px;
+}
+ 
+.secondary-button {
+    background: #2f2e41 !important;
+    border-radius: 35px !important;
+    box-shadow: 0px 0px 30px 0px rgb(0 0 0 / 9%);
+    color: #ffffff !important;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold !important;
+    font-size: 14px !important;
+    letter-spacing: 1px;
+    padding: 0.8rem 1.2rem !important;
+    text-decoration: none;
+}
+ 
+.primary-button:hover {
+    transform: translateY(-5px);
+    transition: all .5s;
+}
+ 
+#categories ul li .link-button {
+    padding: 0;
+    margin-top: 20px;
+    font-size: 16px;
+}
+ 
+#categories ul li .link-button:hover {
+    transform: translateX(5px);
+    transition: all .5s;
+}
+ 
+section .link-button {
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 1px;
+    padding: 0 15px;
+}
+ 
+button:focus {
+    box-shadow: none !important;
+}
+ 
+ 
+/* colors */
+ 
+.bg--violet {
+    height: 40vh;
+    background: #6851ff;
+}
+ 
+.text--white {
+    color: #ffffff;
+}
+ 
+.text--green {
+    color: #4ED199 !important;
+}
+ 
+.text--violet {
+    color: #6851ff;
+}

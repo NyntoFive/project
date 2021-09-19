@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KB - Bootstrap 5 Knowledge Base Theme</title>{% load static %}
+    <link rel="stylesheet" href="{% static 'pages/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'pages/css/style.css' %}">
+    
+  </head>
+
+  <body>
+  
+    {% include 'pages/_kb-nav.html' %}
+    {% include 'pages/_kb-header.html' %}
+    {% include 'pages/_kb-companies.html' %}
+    {% include 'pages/_kb-listing.html' %}
+    {% include 'pages/_kb-usercount.html' %}
+    {% include 'pages/_kb-faq.html' %}
+    {% include 'pages/_kb-footer.html' %}
+  
+    <script src="{% static 'pages/js/script.js' %}"></script>
+    <!-- Font Awesome -->
+    <script src="{% static 'pages/js/4241dd0506.js"></script>
+    <script src="{% static 'pages/js/bootstrap.bundle.min.js' %}"></script>
+  
+  </body>
+
+</html>

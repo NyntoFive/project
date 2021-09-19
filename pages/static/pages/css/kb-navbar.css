@@ -1,0 +1,23 @@
+nav {
+    padding: 0.7rem !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    position: fixed !important;
+    width: 100%;
+    z-index: 99999 !important;
+}
+ 
+#navbar .navbar-brand {
+    color: #ffffff;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 25px;
+}
+ 
+#navbar .nav-item {
+    padding: 0 8px;
+}
+ 
+#navbar .nav-link {
+    color: #ffffff;
+    font-size: 14px;
+}

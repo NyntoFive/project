@@ -3,9 +3,10 @@ from lxml import html
 import unicodedata
 from dataclasses import dataclass
 import json
+from csv import DictReader, DictWriter
 from w3lib.html import remove_tags
 from typing import List, Optional
-
+from requests_html import HTMLSession
 from scrapy.loader import ItemLoader
 from scrapy.loader.processors import TakeFirst, MapCompose, Join
 from sqlmodel import Field, SQLModel, create_engine
@@ -61,3 +62,39 @@ fields = {
     "discount_amount": './/*[@class="DiscountPrice"]/descendant-or-self::text()',
     "products_id": '//input[@name="products_id"]/@value',
 }
+
+def demo(f=None, q="Atlanta"):
+    base_url = 'https://nominatim.openstreetmap.org/search?'
+    params = {"q": q}
+    if f and f in ["xml", "json", "jsonv2", "geojson", "geocodejson"]:
+        params['format']=f
+    session = HTMLSession()
+    result = session.get(base_url, params=params)
+    if result.status_code != 200:
+        print(f"Error: {result.status_code}")
+        return result
+    return result
+
+def read_csv(path):
+    '''read csv and return it as a list of dicts'''
+    with open(path, 'r') as f:
+        return list(DictReader(f))
+
+def write_csv(data, path, mode='w'):
+    '''write data to csv or append to existing one'''
+    if mode not in 'wa':
+        raise ValueError("mode should be either 'w' or 'a'")
+    with open(path, mode) as f:
+        writer = DictWriter(f, fieldnames=data[0].keys())
+        if mode == 'w':
+            writer.writeheader()
+        for row in data:
+            writer.writerow(row)
+
+
+#####################
+# OSCommerce models
+
+url = "https://github.com/osCommerce/oscommerce2/tree/master/catalog/includes/OSC/Schema"
+selector = '//div[@role="rowheader"]/span/a/@href'
+raw_selector = '//a[@id="raw-url"]/@href'

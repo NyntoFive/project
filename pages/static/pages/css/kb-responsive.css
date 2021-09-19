@@ -1,0 +1,160 @@
+@media (max-width: 576px) {
+    h1.text-heading {
+        margin-top: -120px;
+        font-size: 35px;
+    }
+    .header-content-container {
+        padding-top: 30px;
+    }
+    .svg-header-container {
+        height: 50vh;
+    }
+    .svg-header-container img {
+        width: 70%;
+        height: 70%;
+    }
+    .bg-violet {
+        height: 90vh;
+    }
+    .sm-height {
+        height: 40px;
+    }
+    .search-container {
+        margin-right: 0%;
+    }
+    h2.text-heading {
+        font-size: 30px;
+    }
+    .stat-item h6 {
+        font-size: 40px;
+    }
+    .footer-logo {
+        display: none;
+    }
+}
+ 
+@media (max-width: 768px) {
+    #categories .row .cat-card:first-child,
+    #categories .row .cat-card:nth-child(2) {
+        border-right: none;
+    }
+    #categories .row .cat-card {
+        margin: 0;
+    }
+    #faq .card.sticky-element {
+        margin-bottom: 40px;
+    }
+    .svg-header-container img {
+        height: 65%;
+    }
+    .header-content-heading {
+        font-size: 34px;
+    }
+    .header-content-text {
+        font-size: 15px;
+    }
+    .search-container {
+        border-radius: 35px;
+        padding: 0px;
+        padding-left: 15px;
+        margin-top: 24px;
+        margin-right: 0%;
+    }
+    .form-control {
+        font-size: 0.7rem !important;
+    }
+    .guide-container {
+        max-width: 80% !important;
+    }
+    footer .left ul li {
+        display: block;
+        padding-bottom: 8px;
+    }
+    footer {
+        text-align: center;
+    }
+    footer .right {
+        text-align: center;
+    }
+    footer .navbar-brand {
+        display: none;
+    }
+}
+ 
+@media (max-width: 992px) {
+    nav#navbar {
+        background: #ffffff !important;
+    }
+    #navbar .navbar-brand {
+        color: #380a7f;
+    }
+    #navbar .nav-link {
+        color: #000000;
+    }
+    nav {
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;
+    }
+    .nav-bg {
+        background-color: blue !important;
+    }
+    img.nav-logo {
+        height: 60px;
+        width: auto;
+    }
+    nav .nav-link {
+        padding: 20px 1px;
+    }
+    .nav-item {
+        display: flex;
+        justify-content: center;
+    }
+    .navbar-text {
+        display: flex;
+        justify-content: center;
+    }
+    .nav-item {
+        padding-left: 0px
+    }
+    .svg-header-container img {
+        height: 70%;
+    }
+    .header-content-heading {
+        padding-top: 10px;
+        font-size: 33px;
+    }
+    h1.text-heading {
+        margin-top: -160px;
+        font-size: 45px;
+    }
+    .company-img {
+        height: 50px;
+    }
+    .guide-container {
+        max-width: 100% !important;
+    }
+    .stat-item h6 {
+        font-size: 60px;
+    }
+    #contact .card {
+        margin-bottom: 20px;
+    }
+    .section {
+        padding: 50px 0px;
+    }
+}
+ 
+@media (max-width: 1199px) {
+    #about {
+        margin: 0;
+    }
+    .svg-header-container img {
+        height: 90%
+    }
+    .header-content-heading {
+        font-size: 40px;
+    }
+    .section {
+        padding: 80px 0px;
+    }
+}
